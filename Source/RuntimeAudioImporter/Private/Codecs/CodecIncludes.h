@@ -29,25 +29,25 @@ THIRD_PARTY_INCLUDES_START
 #if DR_MP3_IMPLEMENTATION
 #define DRMP3_API static
 #define DRMP3_PRIVATE static
-#include "ThirdParty/dr_mp3.h"
+#include "dr_mp3.h"
 #elif MINIMP3_IMPLEMENTATION
 
 
-#include "ThirdParty/minimp3_ex.h"
-#include "ThirdParty/minimp3.h"
+#include "minimp3_ex.h"
+#include "minimp3.h"
 #endif
 #endif
 
 #ifdef INCLUDE_WAV
 #define DRWAV_API static
 #define DRWAV_PRIVATE static
-#include "ThirdParty/dr_wav.h"
+#include "dr_wav.h"
 #endif
 
 #ifdef INCLUDE_FLAC
 #define DRFLAC_API static
 #define DRFLAC_PRIVATE static
-#include "ThirdParty/dr_flac.h"
+#include "dr_flac.h"
 #endif
 
 #ifdef INCLUDE_VORBIS

@@ -7,6 +7,9 @@ public class RuntimeAudioImporter : ModuleRules
 {
 	public RuntimeAudioImporter(ReadOnlyTargetRules Target) : base(Target)
 	{
+		// Support code in ThirdParty folder
+		PublicIncludePaths.Add(Path.Combine(ModuleDirectory, "..", "..", "Source", "ThirdParty"));
+		
 		// Change to toggle MetaSounds support
 		bool bEnableMetaSoundSupport = false;
 
@@ -27,7 +30,7 @@ public class RuntimeAudioImporter : ModuleRules
 		
 		// Whether to use dr_mp3 or minimp3 for MP3 decoding (minimp3 is used by default)
 		// minimp3 is preferred since it supports LAME tags for more precise seeking and length information
-		bool bUseDrMp3 = false;
+		bool bUseDrMp3 = true;
 
 		PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;
 
